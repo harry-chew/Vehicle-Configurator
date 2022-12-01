@@ -11,13 +11,10 @@ public class MuteButton : MonoBehaviour
 
     public delegate void OnMuteClick(bool mute);
     public static OnMuteClick onMuteClick;
-    //ButtongToggle function for unity editor
-
 
     private void Start()
     {
         var button = GetComponent<Button>();
-
         button.onClick.AddListener(ButtonToggle);
     }
     private void ButtonToggle()

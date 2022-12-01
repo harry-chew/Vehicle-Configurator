@@ -5,10 +5,9 @@ using UnityEngine;
 public class ShowOnClick : MonoBehaviour
 {
     [SerializeField] private bool isShown = false;
-
     [SerializeField] private GameObject objToShow;
 
-    public void OnClick()
+    public void OnMouseUp()
     {
         ShowToggle();
         Debug.Log("click");
