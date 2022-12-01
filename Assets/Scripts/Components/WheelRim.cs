@@ -1,8 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class WheelRim : ScriptableObject {
-    [SerializeField] private int componentPrice;
+[Serializable]
+public class WheelRim : ICarComponent {
+    [SerializeField] private double componentPrice;
     [SerializeField] private string componentName;
+    [SerializeField] private int id;
+    [SerializeField] private ComponentType componentType;
+
+    public int GetId()
+    {
+        return id;
+    }
+
+    public string GetName()
+    {
+        return componentName;
+    }
+
+    ComponentType ICarComponent.GetType()
+    {
+        return componentType;
+    }
 }
